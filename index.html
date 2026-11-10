@@ -7,12 +7,12 @@
 <meta name="theme-color" content="#0B1220">
 <title>AI First 엑소더스 랩 · CTS 광역본부</title>
 <meta property="og:title" content="AI First 엑소더스 랩">
-<meta property="og:description" content="12월 7일 페스티벌까지, 광역본부가 함께 만드는 AI 실험실">
+<meta property="og:description" content="12월 7일까지 매일 들어와 함께 배우는 광역본부 AI 가이드">
 <meta property="og:image" content="og.jpg">
 <link rel="icon" href="favicon.png">
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
+
 :root{
   --ink:#0B1220; --ink2:#1A2436; --muted:#667085; --line:#E6E2D9; --bg:#F6F4EF; --card:#FFFFFF;
   --gold:#C29B4E; --gold2:#E4C88A; --goldbg:#FBF4E4; --navy:#14223A; --ok:#1F8A5B; --warn:#B54708; --red:#C0392B;
@@ -104,7 +104,7 @@ section.sec{padding:96px 0}
 .typo.t2{background:linear-gradient(160deg,#2A2216,#14100A)}
 .typo.t3{background:linear-gradient(160deg,#16302A,#0B1A16)}
 .typo .big{font-size:26px;font-weight:800;line-height:1.25;letter-spacing:-.03em}
-.typo .ic{font-size:12px;letter-spacing:.14em;color:var(--gold2);font-weight:700}
+.typo .ic{font-size:12px;letter-spacing:.08em;color:var(--gold2);font-weight:700;white-space:nowrap}
 .typo .lines{display:grid;gap:6px;opacity:.55}
 .typo .lines i{display:block;height:6px;border-radius:3px;background:rgba(255,255,255,.35)}
 .sc .body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -308,6 +308,133 @@ footer b{color:#fff}
   .tabbar a.cta{color:var(--gold)}
   .gate form{flex-direction:column}
 }
+
+/* ---------- v3 additions ---------- */
+.hero .wrap{padding-top:72px;padding-bottom:56px}
+.hero h1{font-size:clamp(34px,5.4vw,64px)}
+.today-line{font-size:15px;color:rgba(255,255,255,.75);font-weight:600;margin-top:18px}
+.today{margin-top:-28px;position:relative;z-index:5}
+.today-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:20px}
+.pickcard{background:#fff;border-radius:24px;box-shadow:0 2px 4px rgba(16,24,40,.05),0 24px 48px rgba(16,24,40,.12);overflow:hidden;display:grid;grid-template-columns:300px 1fr}
+.pickcard .m{position:relative;background:#0B1220;min-height:380px}
+.pickcard .m img,.pickcard .m video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pickcard .c{padding:28px 28px 24px;display:flex;flex-direction:column;gap:12px}
+.badge-ai{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:800;letter-spacing:.06em;color:#93701F;background:var(--goldbg);border-radius:999px;height:28px;padding:0 12px;width:max-content}
+.badge-ai i{width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(194,155,78,.22)}
+.pickcard h2{font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.pickcard .why{font-size:15px;color:#475467}
+.learn{display:grid;gap:8px;counter-reset:l}
+.learn div{display:grid;grid-template-columns:24px 1fr;gap:10px;font-size:14px;line-height:1.5}
+.learn div::before{counter-increment:l;content:counter(l);width:24px;height:24px;border-radius:50%;background:var(--ink);color:#fff;font-size:12px;font-weight:800;display:grid;place-items:center}
+.apply{background:#F3F6FB;border-radius:14px;padding:14px 16px;font-size:14px;color:#1D2939}
+.apply b{display:block;font-size:11px;letter-spacing:.1em;color:#475467;margin-bottom:2px}
+.side{display:grid;gap:20px;align-content:start}
+.tipcard{background:var(--ink);color:#fff;border-radius:24px;padding:26px;position:relative;overflow:hidden}
+.tipcard::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(194,155,78,.35),transparent 70%)}
+.tipcard .t{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--gold2)}
+.tipcard h3{font-size:21px;font-weight:800;margin-top:8px;letter-spacing:-.02em;line-height:1.35}
+.tipcard p{font-size:14px;color:rgba(255,255,255,.78);margin-top:8px}
+.prompt{margin-top:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:12px 14px;font-size:14px;line-height:1.55;position:relative;z-index:1}
+.prompt small{display:block;font-size:11px;letter-spacing:.1em;color:var(--gold2);font-weight:800;margin-bottom:4px}
+.copy{margin-top:10px;height:34px;padding:0 14px;border-radius:999px;background:var(--gold);color:#fff;font-size:13px;font-weight:700;position:relative;z-index:1}
+.light .prompt{background:#F7F6F2;border-color:#ECE7DC;color:#1D2939}
+.light .prompt small{color:#93701F}
+.svcard{background:#fff;border-radius:24px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+.svcard h3{font-size:18px;font-weight:800}
+.svcard p{font-size:14px;color:var(--muted)}
+.meter{display:flex;align-items:baseline;gap:6px}
+.meter b{font-size:30px;font-weight:800;letter-spacing:-.03em}
+.meter span{color:var(--muted);font-size:14px}
+.done-chip{display:inline-flex;align-items:center;gap:6px;color:var(--ok);font-weight:700;font-size:14px}
+
+/* survey */
+.svhero{background:linear-gradient(135deg,#14223A,#0B1220);color:#fff;border-radius:28px;padding:44px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.svhero::after{content:"";position:absolute;right:-120px;bottom:-120px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(194,155,78,.3),transparent 70%)}
+.svhero h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;letter-spacing:-.03em;line-height:1.3}
+.svhero p{color:rgba(255,255,255,.75);margin-top:10px}
+.svlist{display:grid;gap:10px;position:relative;z-index:1}
+.svlist div{display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:12px 16px;font-size:14px}
+.svlist b{width:26px;height:26px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-size:12px;flex:none}
+.stepper{display:flex;gap:6px;margin:18px 0 6px}
+.stepper i{flex:1;height:4px;border-radius:4px;background:#ECE8DF}
+.stepper i.on{background:var(--gold)}
+.q{margin-top:20px}
+.q>label{display:block;font-size:15px;font-weight:700;color:#1D2939;margin-bottom:10px}
+.q>label small{font-weight:500;color:#98A2B3;margin-left:6px;font-size:13px}
+.stars{display:flex;gap:8px;flex-wrap:wrap}
+.stars button{min-width:52px;height:46px;border-radius:12px;border:1px solid #DAD5CA;background:#fff;font-weight:800;font-size:16px;color:#667085;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;padding:0 8px}
+.stars button small{font-size:10px;font-weight:600;color:#98A2B3}
+.stars button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.stars button.on small{color:rgba(255,255,255,.7)}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opts button{height:40px;padding:0 14px;border-radius:999px;border:1px solid #DAD5CA;background:#fff;font-size:14px;font-weight:600;color:#475467}
+.opts button.on{background:var(--goldbg);border-color:var(--gold);color:#6B5524}
+.q textarea,.q input[type=text]{width:100%;border:1px solid #DAD5CA;border-radius:12px;padding:12px 14px;font-size:15px;outline:none;background:#fff}
+.q textarea{min-height:86px;resize:vertical}
+.q textarea:focus,.q input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(194,155,78,.15)}
+.vision{background:var(--goldbg);border-radius:14px;padding:14px 16px;font-size:15px;font-weight:700;color:#6B5524;margin-bottom:12px}
+.thanks{text-align:center;padding:30px 10px}
+.thanks h2{font-size:26px;font-weight:800;margin-top:12px}
+.thanks p{color:var(--muted);margin-top:8px}
+.thanks .ok{width:64px;height:64px;border-radius:50%;background:#E8F7EF;display:grid;place-items:center;margin:0 auto}
+.thanks .ok svg{width:30px;height:30px;stroke:var(--ok);fill:none;stroke-width:2.4}
+
+/* guide tabs */
+.gtabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.gpanel{display:none}
+.gpanel.on{display:block}
+.gsteps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gs{background:#fff;border-radius:20px;padding:24px;box-shadow:var(--shadow);position:relative}
+.gs .n{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.1em}
+.gs h4{font-size:19px;font-weight:800;margin-top:8px;letter-spacing:-.02em;line-height:1.35}
+.gs p{font-size:14px;color:var(--muted);margin-top:8px}
+.gs ul{margin-top:10px;padding-left:18px;font-size:14px;color:#344054;display:grid;gap:4px}
+.combo{display:grid;grid-template-columns:1fr 64px 1fr;gap:0;align-items:stretch;margin-bottom:18px}
+.combo .box2{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.combo .box2 h4{font-size:17px;font-weight:800}
+.combo .box2 p{font-size:14px;color:var(--muted);margin-top:6px}
+.combo .plus{display:grid;place-items:center;font-size:28px;font-weight:300;color:var(--gold)}
+.recipes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.recipe{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.recipe .who3{font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.08em}
+.recipe h4{font-size:18px;font-weight:800;margin-top:6px}
+.recipe .flow{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.recipe .flow span{font-size:12px;font-weight:700;background:#F2F0EA;border-radius:8px;padding:5px 9px;color:#475467}
+.recipe .flow span.ai{background:var(--goldbg);color:#93701F}
+
+/* gallery */
+.sc .author{display:flex;align-items:center;gap:8px;font-size:12px;color:#667085}
+.sc .author .av{width:22px;height:22px;font-size:11px}
+.ribbon{position:absolute;right:12px;top:12px;z-index:3;background:var(--gold);color:#fff;font-size:11px;font-weight:800;border-radius:999px;padding:4px 10px}
+.picks{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;margin-bottom:26px;scrollbar-width:thin}
+.pk{flex:none;width:220px;background:#fff;border-radius:16px;padding:12px;box-shadow:var(--shadow);display:grid;grid-template-columns:56px 1fr;gap:10px;cursor:pointer}
+.pk img,.pk .ph{width:56px;height:70px;border-radius:10px;object-fit:cover;background:#14223A}
+.pk small{font-size:11px;color:var(--gold);font-weight:800}
+.pk b{display:block;font-size:13px;line-height:1.35;margin-top:2px}
+.toolchips{display:flex;gap:6px;flex-wrap:wrap}
+.toolchips button{height:34px;padding:0 12px;border-radius:999px;border:1px solid #DAD5CA;background:#fff;font-size:13px;font-weight:600;color:#475467}
+.toolchips button.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.imgpick{display:flex;gap:12px;align-items:center}
+.imgpick img{width:72px;height:90px;object-fit:cover;border-radius:10px;background:#eee}
+.comment{border-top:1px solid #F1EFEA;padding:10px 0;font-size:14px}
+.comment small{color:#98A2B3;font-size:12px}
+
+@media (max-width:1080px){
+  .today-grid{grid-template-columns:1fr}
+  .gsteps{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .today{margin-top:-18px}
+  .pickcard{grid-template-columns:1fr}
+  .pickcard .m{min-height:0;aspect-ratio:4/5;max-height:420px}
+  .pickcard .c{padding:22px 20px}
+  .pickcard h2{font-size:22px}
+  .svhero{grid-template-columns:1fr;padding:28px 22px}
+  .gsteps,.recipes{grid-template-columns:1fr}
+  .combo{grid-template-columns:1fr;gap:6px}
+  .combo .plus{height:28px}
+  .stars button{min-width:0;flex:1}
+}
 </style>
 </head>
 <body>
@@ -316,9 +443,9 @@ footer b{color:#fff}
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo.png" alt="CTS"> 엑소더스 랩 <span>광역본부</span></a>
     <div class="nav-links">
-      <a href="#works">국장 작업실</a><a href="#board">우리의 프로젝트</a><a href="#schedule">일정</a><a href="#guide">발표 가이드</a><a href="#library">자료실</a>
+      <a href="#today">오늘</a><a href="#survey">설문</a><a href="#guide">가이드</a><a href="#gallery">작업실</a><a href="#board">12.7 준비</a><a href="#library">자료실</a>
     </div>
-    <button class="btn btn-gold auth-only hide" onclick="openForm()">내 프로젝트 등록</button>
+    <button class="btn btn-gold auth-only hide" onclick="openSample()">내 샘플 올리기</button>
   </div>
 </nav>
 
@@ -326,49 +453,168 @@ footer b{color:#fff}
   <div class="hero-bg"></div>
   <div class="wrap">
     <div class="dday"><b id="ddayBadge">D-</b><span>12월 7일 AI 지식·활용 페스티벌</span></div>
-    <h1>광야를 지나,<br><em>새 일을 만드는</em> 광역본부</h1>
-    <p class="sub">AI First 엑소더스 랩은 우리 46명이 각자 하나씩 만드는 실험을 한곳에 모으는 곳입니다. 어떤 과정으로 무엇을 만들었는지 보고, 서로 묻고, 함께 키워 12월 7일에 내놓습니다.</p>
+    <h1>오늘도 하나씩,<br><em>함께 배우는</em> 광역본부</h1>
+    <p class="sub">12월 7일까지 매일 들어와 보는 우리만의 AI 가이드입니다. 오늘의 결과물과 팁을 보고, 내가 만든 것을 올리고, 서로 배웁니다.</p>
+    <div class="today-line auth-only hide" id="todayLine"></div>
 
     <div id="gate" class="gate">
       <h3>광역본부 직원 전용</h3>
       <p>단톡방에 공유된 비밀번호를 넣어 주세요. 한 번 넣으면 이 기기에서는 다시 묻지 않습니다.</p>
       <form onsubmit="login(event)">
-        <input id="pw" type="password" placeholder="비밀번호" autocomplete="current-password">
+        <input id="pw" type="password" placeholder="비밀번호" autocomplete="off">
         <button class="btn btn-gold" type="submit">들어가기</button>
       </form>
       <div class="err" id="gateErr"></div>
     </div>
 
     <div class="auth-only hide">
-      <div class="hero-cta">
-        <button class="btn btn-gold" onclick="openForm()">내 프로젝트 등록하기</button>
-        <a class="btn btn-ghost" href="#works">국장 작업 먼저 보기</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><div class="n" id="sProj">0<small>/46</small></div><div class="l">등록된 프로젝트</div></div>
-        <div class="stat"><div class="n" id="sWeek">0</div><div class="l">이번 주 진행 기록</div></div>
-        <div class="stat"><div class="n" id="sCheer">0</div><div class="l">응원과 아이디어</div></div>
-        <div class="stat"><div class="n" id="sShow">0</div><div class="l">국장 작업 사례</div></div>
-      </div>
+      <div class="hero-cta" id="heroCta"></div>
     </div>
   </div>
 </header>
 
-<div class="notice auth-only hide"><div class="wrap"><b>공지</b><span id="notice"></span></div></div>
-
 <main class="auth-only hide">
 
-<section class="sec" id="works">
+<section id="today" class="today">
+  <div class="wrap">
+    <div class="today-grid">
+      <div id="pickBox"></div>
+      <div class="side">
+        <div class="tipcard" id="tipBox"></div>
+        <div class="svcard" id="svMini"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="notice" style="margin-top:56px"><div class="wrap"><b>공지</b><span id="notice"></span></div></div>
+
+<section class="sec" id="survey">
+  <div class="wrap">
+    <div class="svhero">
+      <div style="position:relative;z-index:1">
+        <div class="eyebrow">Workshop Survey</div>
+        <h2>11월 9일 킥오프 워크숍,<br>어떠셨나요?</h2>
+        <p id="svIntro"></p>
+        <div class="hero-cta" id="svCta" style="margin-top:22px"></div>
+      </div>
+      <div class="svlist">
+        <div><b>1</b>나에 대해 (이름은 적지 않아도 됩니다)</div>
+        <div><b>2</b>강의와 실습 평가</div>
+        <div><b>3</b>실습 돌아보기</div>
+        <div><b>4</b>우리 업무, 사역, 비전에 주는 도움</div>
+        <div><b>5</b>앞으로 해보고 싶은 것</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="guide" style="background:#fff">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="eyebrow">Director's Workshop</div>
-        <h2 class="h2">국장 작업실</h2>
-        <p class="lead">지난 두 달 AI와 함께 만든 결과물입니다. 카드를 누르면 사람이 한 일과 AI가 한 일, 실수와 교훈까지 볼 수 있습니다. 교회 샘플은 교회 대상 구독형 서비스를 설명할 때 참고 자료로 씁니다.</p>
+        <div class="eyebrow">Easy Guide</div>
+        <h2 class="h2">쉬운 사용 가이드</h2>
+        <p class="lead">어사이드는 브라우저에서 직접 일하는 AI입니다. Claude나 ChatGPT를 두뇌로 연결해 쓰고, 글과 그림은 각 앱에서 만들어 어사이드에게 실행을 맡기면 됩니다.</p>
       </div>
-      <div class="chips" id="scGroup"></div>
     </div>
-    <div class="chips" id="scCat" style="margin-bottom:22px"></div>
+    <div class="gtabs chips" id="gtabs">
+      <button class="chip on" data-t="g1">처음 3단계</button>
+      <button class="chip" data-t="g2">Claude + 어사이드</button>
+      <button class="chip" data-t="g3">ChatGPT + 어사이드</button>
+      <button class="chip" data-t="g4">직무별 레시피</button>
+      <button class="chip" data-t="g5">꼭 지킬 것</button>
+    </div>
+
+    <div class="gpanel on" id="g1">
+      <div class="gsteps">
+        <div class="gs"><div class="n">STEP 1</div><h4>어사이드 열고 사이트에 로그인</h4><p>투데이N, 네이버 블로그, 유튜브 스튜디오처럼 자주 쓰는 사이트에 미리 로그인해 두면 어사이드가 그 화면에서 바로 일합니다.</p></div>
+        <div class="gs"><div class="n">STEP 2</div><h4>AI 연결하기</h4><p>어사이드 설정에서 쓰고 있는 ChatGPT 또는 Claude 구독을 연결합니다(API 키도 가능). 비밀번호는 AI에게 보이지 않게 자동 입력됩니다.</p></div>
+        <div class="gs"><div class="n">STEP 3</div><h4>한 문장으로 맡기고, 확인하고, 승인</h4><p>끝 모습을 한 문장으로 말하세요. 중간 보고를 보고, 게시·전송·결제 전에는 어사이드가 묻습니다. 마지막 확인은 사람이 합니다.</p></div>
+      </div>
+      <div class="light" style="margin-top:18px">
+        <div class="prompt"><small>처음 해 보기 좋은 지시문</small>우리 지사 협력 교회 홈페이지 3곳에서 이번 주 행사 소식을 찾아 교회 이름, 날짜, 내용으로 표를 만들어줘</div>
+        <button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>
+      </div>
+    </div>
+
+    <div class="gpanel" id="g2">
+      <div class="combo">
+        <div class="box2"><h4>Claude가 잘하는 것</h4><p>긴 글과 문서. 기사 원고, 공문, 기획안, 설교 요약, 엑셀 표 정리. 한국어 문장이 자연스럽고 긴 자료를 꼼꼼히 읽습니다.</p></div>
+        <div class="plus">+</div>
+        <div class="box2"><h4>어사이드가 하는 것</h4><p>사이트에서 실제로 하는 일. 자료 찾기, 입력, 저장, 업로드, 매주 예약 실행. 어사이드 설정에서 Claude를 두뇌로 연결해도 됩니다.</p></div>
+      </div>
+      <div class="gsteps">
+        <div class="gs"><div class="n">이렇게 써요 1</div><h4>Claude로 초안, 어사이드로 입력</h4><ul><li>Claude: 취재 메모로 기사 초안</li><li>어사이드: 투데이N 입력, 저장 전 멈춤</li><li>사람: 사실 확인 후 저장</li></ul></div>
+        <div class="gs"><div class="n">이렇게 써요 2</div><h4>어사이드로 자료 모으고, Claude로 정리</h4><ul><li>어사이드: 교회 홈페이지 주보 모으기</li><li>Claude: 기사 후보 순위 정리</li><li>사람: 취재할 소식 결정</li></ul></div>
+        <div class="gs"><div class="n">이렇게 써요 3</div><h4>Claude로 문서, 어사이드로 기안</h4><ul><li>Claude: 공문, 기획안 문장 다듬기</li><li>어사이드: 그룹웨어 기안 입력, 임시저장까지</li><li>사람: 결재선 지정과 상신</li></ul></div>
+      </div>
+      <div class="light" style="margin-top:18px">
+        <div class="prompt"><small>Claude에게</small>너는 CTS 지역 기자야. 아래 취재 메모로 400자 기사, 제목 1개, 부제 1개를 써줘. 이름과 날짜는 메모에 있는 그대로만 써.</div>
+        <button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>
+        <div class="prompt" style="margin-top:14px"><small>어사이드에게</small>이 원고를 투데이N 기사쓰기 화면에 제목, 부제, 본문으로 넣고, 저장 버튼을 누르기 전에 멈춰서 보여줘</div>
+        <button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>
+      </div>
+    </div>
+
+    <div class="gpanel" id="g3">
+      <div class="combo">
+        <div class="box2"><h4>ChatGPT가 잘하는 것</h4><p>그림과 아이디어. 포스터·썸네일 시안 이미지, 여러 갈래 아이디어, 음성 대화로 생각 정리.</p></div>
+        <div class="plus">+</div>
+        <div class="box2"><h4>어사이드가 하는 것</h4><p>만든 것을 제자리에 올리기. 블로그·SNS 게시 준비, 파일 정리, 시트 기록. 어사이드 설정에서 ChatGPT를 두뇌로 연결해도 됩니다.</p></div>
+      </div>
+      <div class="gsteps">
+        <div class="gs"><div class="n">이렇게 써요 1</div><h4>ChatGPT로 썸네일 시안, 어사이드로 게시</h4><ul><li>ChatGPT: 썸네일 시안 이미지 2~3장</li><li>어사이드: 블로그 글에 넣고 발행 전 멈춤</li><li>사람: 사진 권리와 문구 확인</li></ul></div>
+        <div class="gs"><div class="n">이렇게 써요 2</div><h4>음성으로 기획, 어사이드로 기록</h4><ul><li>ChatGPT 음성: 이동 중 아이디어 말하기</li><li>어사이드: 요약을 내 프로젝트 카드에 기록</li><li>사람: 다음 할 일 정하기</li></ul></div>
+        <div class="gs"><div class="n">이렇게 써요 3</div><h4>같은 질문, 두 개의 답</h4><ul><li>ChatGPT와 Claude에 같은 질문</li><li>어사이드: 두 답을 표로 비교</li><li>사람: 기준을 정하고 고르기</li></ul></div>
+      </div>
+      <div class="light" style="margin-top:18px">
+        <div class="prompt"><small>ChatGPT에게</small>교회 추수감사 음악회 포스터 시안을 세로로 2가지 만들어줘. 사람 얼굴은 넣지 말고, 따뜻한 금색과 짙은 남색으로.</div>
+        <button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>
+        <div class="prompt" style="margin-top:14px"><small>어사이드에게</small>이 이미지를 대표 사진으로 네이버 블로그에 행사 안내 글을 쓰고, 발행하기 전에 미리보기를 보여줘</div>
+        <button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>
+      </div>
+    </div>
+
+    <div class="gpanel" id="g4">
+      <div class="recipes">
+        <div class="recipe"><div class="who3">기자</div><h4>주보에서 기사 초안까지</h4><div class="flow"><span class="ai">어사이드: 주보 모으기</span><span class="ai">Claude: 기사 후보·초안</span><span>사람: 교회 확인 전화</span><span class="ai">어사이드: 투데이N 입력</span></div></div>
+        <div class="recipe"><div class="who3">PD·영상</div><h4>설교 링크 하나로 쇼츠 후보</h4><div class="flow"><span class="ai">어사이드: 자막 읽기</span><span class="ai">AI: 1분 구간 3곳 추천</span><span>사람: 구간 고르기</span><span>사람: 편집·검수</span></div></div>
+        <div class="recipe"><div class="who3">홍보·마케팅</div><h4>기사 하나로 블로그·SNS</h4><div class="flow"><span class="ai">Claude: 채널별 문구</span><span class="ai">ChatGPT: 카드 이미지</span><span class="ai">어사이드: 게시 준비</span><span>사람: 발행 승인</span></div></div>
+        <div class="recipe"><div class="who3">행정·경영</div><h4>공문과 기안, 임시저장까지</h4><div class="flow"><span class="ai">Claude: 공문 문장</span><span class="ai">어사이드: 그룹웨어 입력</span><span>사람: 결재선·상신</span></div></div>
+        <div class="recipe"><div class="who3">교회 협력·후원</div><h4>우리 지역 교회 주간 브리핑</h4><div class="flow"><span class="ai">어사이드: 북마크 교회 순회(예약)</span><span class="ai">AI: 새 소식 요약</span><span>사람: 연락할 교회 정하기</span></div></div>
+        <div class="recipe"><div class="who3">설교 관리</div><h4>설교 제목·설명란 정리</h4><div class="flow"><span class="ai">AI: 제목 공식·설명란 초안</span><span>사람: 목사님 확인</span><span class="ai">어사이드: 유튜브 스튜디오 반영</span></div></div>
+      </div>
+    </div>
+
+    <div class="gpanel" id="g5">
+      <div class="rules" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <div class="rule"><i><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></i><div><b>마지막 확인은 사람이</b><p>AI는 그럴듯하게 틀립니다. 이름, 날짜, 숫자, 성경 구절은 원본과 대조합니다.</p></div></div>
+        <div class="rule"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16v.5"/></svg></i><div><b>공개 전에는 교회 허락</b><p>교회 사진, 성도 얼굴, 설교 영상은 허락을 받은 뒤 밖으로 냅니다.</p></div></div>
+        <div class="rule"><i><svg viewBox="0 0 24 24"><path d="M6 11h12v9H6z"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></i><div><b>개인 정보는 넣지 않기</b><p>목사님과 나눈 대화, 성도 연락처, 후원자 정보, 내부 수치는 AI 대화와 작업실에 올리지 않습니다.</p></div></div>
+        <div class="rule"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></i><div><b>먼저 해 보고 비교</b><p>판단이 필요한 일은 먼저 직접 해 본 뒤 AI 결과와 비교하면 실력이 늡니다.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <div class="eyebrow">Everyone's Workshop</div>
+        <h2 class="h2">모두의 작업실</h2>
+        <p class="lead">누구나 자기 샘플을 올립니다. 완성작이 아니어도 괜찮습니다. 매일 아침 AI가 이 가운데 하나를 오늘의 결과물로 골라 함께 배울 점을 정리합니다.</p>
+      </div>
+      <button class="btn btn-dark" onclick="openSample()">+ 내 샘플 올리기</button>
+    </div>
+    <div id="pickStrip"></div>
+    <div class="tools">
+      <select id="gCat"><option value="">모든 분야</option></select>
+      <select id="gUse"><option value="">모든 용도</option></select>
+      <select id="gSort"><option value="new">최신순</option><option value="cheer">응원 많은 순</option></select>
+      <input id="gQ" placeholder="이름, 제목, 도구 검색">
+    </div>
     <div class="grid" id="scGrid"></div>
     <div class="more" id="scMore"></div>
   </div>
@@ -378,12 +624,13 @@ footer b{color:#fff}
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <div class="eyebrow">Our Projects</div>
-        <h2 class="h2">우리의 프로젝트</h2>
-        <p class="lead">한 줄 아이디어도 좋습니다. 등록하면 카드가 생기고, 매주 진행을 적으면 모두가 함께 봅니다. 도움이 필요하면 '막힌 점'에 적어 주세요.</p>
+        <div class="eyebrow">Road to 12.7</div>
+        <h2 class="h2">12월 7일 발표 준비</h2>
+        <p class="lead">한 사람 5분씩 발표합니다. 발표할 주제를 등록하고 매주 진행을 적으면 모두가 함께 봅니다. 막힌 점을 적으면 동료가 아이디어를 남깁니다.</p>
       </div>
-      <button class="btn btn-dark" onclick="openForm()">+ 내 프로젝트 등록</button>
+      <button class="btn btn-dark" onclick="openForm()">+ 내 발표 주제 등록</button>
     </div>
+    <div class="tl" id="tl" style="margin-bottom:40px"></div>
     <div class="hqbar" id="hqbar"></div>
     <div class="tools">
       <select id="fHq"><option value="">전체 총국</option></select>
@@ -392,58 +639,17 @@ footer b{color:#fff}
       <div class="seg"><button class="on" data-v="card">카드</button><button data-v="kanban">단계별</button></div>
     </div>
     <div id="pWrap"></div>
-  </div>
-</section>
-
-<section class="sec" id="talk">
-  <div class="wrap">
-    <div class="two">
-      <div class="panel">
-        <h3>최근 소식 <span class="pill" id="feedCount"></span></h3>
-        <div class="feed" id="feed"></div>
-      </div>
-      <div class="panel">
-        <h3>도움이 필요해요</h3>
-        <p style="font-size:14px;color:var(--muted);margin:-6px 0 14px">아는 방법이 있으면 카드에서 '아이디어'로 알려 주세요.</p>
-        <div class="hl" id="helpList"></div>
-      </div>
+    <div class="two" style="margin-top:28px">
+      <div class="panel"><h3>최근 소식 <span class="pill" id="feedCount"></span></h3><div class="feed" id="feed"></div></div>
+      <div class="panel"><h3>도움이 필요해요</h3><p style="font-size:14px;color:var(--muted);margin:-6px 0 14px">아는 방법이 있으면 카드에서 '아이디어'로 알려 주세요.</p><div class="hl" id="helpList"></div></div>
     </div>
-  </div>
-</section>
-
-<section class="sec" id="schedule" style="background:#fff">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow">Road to 12.7</div>
-        <h2 class="h2">12월 7일까지 4주</h2>
-        <p class="lead">한 번에 완성하지 않습니다. 매주 조금씩 올리고 서로 보면서 다듬습니다.</p>
-      </div>
-    </div>
-    <div class="tl" id="tl"></div>
-  </div>
-</section>
-
-<section class="sec" id="guide">
-  <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <div class="eyebrow">5-Minute Talk</div>
-        <h2 class="h2">5분 발표, 이렇게 짜세요</h2>
-        <p class="lead">40여 명이 5분씩 발표합니다. 같은 순서로 말하면 듣는 사람이 비교하기 쉽고, 좋은 아이디어가 사업으로 이어지기 쉽습니다.</p>
-      </div>
-    </div>
+    <h3 style="font-size:22px;font-weight:800;margin:48px 0 16px;letter-spacing:-.02em">5분 발표, 이렇게 짜세요</h3>
     <div class="guide">
-      <div class="gc"><div class="t">0:00 ~ 0:40</div><h4>문제</h4><p>지금 이 일에 매주 몇 시간이 드나요? 무엇이 불편한가요?</p><div class="num">1</div></div>
-      <div class="gc"><div class="t">0:40 ~ 1:30</div><h4>전과 후</h4><p>AI를 쓰기 전과 후의 시간, 품질, 횟수를 숫자로.</p><div class="num">2</div></div>
-      <div class="gc"><div class="t">1:30 ~ 2:40</div><h4>과정</h4><p>사람이 한 일과 AI가 한 일을 나눠서. 실수한 것도 그대로.</p><div class="num">3</div></div>
-      <div class="gc"><div class="t">2:40 ~ 4:10</div><h4>시연</h4><p>실제 화면이나 결과물. 영상은 1분 안쪽으로.</p><div class="num">4</div></div>
-      <div class="gc"><div class="t">4:10 ~ 5:00</div><h4>다음 걸음</h4><p>교회에 어떻게 돌려줄지, 사업이 될 수 있는지, 대신 줄일 일은 무엇인지.</p><div class="num">5</div></div>
-    </div>
-    <div class="check">
-      <div>교회 이름과 사진은 교회 허락을 받았나요?</div>
-      <div>AI가 쓴 사실(이름, 날짜, 숫자)을 사람이 확인했나요?</div>
-      <div>발표자료는 12월 3일까지 자료실 90번 폴더에 올렸나요?</div>
+      <div class="gc"><div class="t">0:00 ~ 0:40</div><h4>문제</h4><p>지금 이 일에 매주 몇 시간이 드나요?</p><div class="num">1</div></div>
+      <div class="gc"><div class="t">0:40 ~ 1:30</div><h4>전과 후</h4><p>시간, 품질, 횟수를 숫자로.</p><div class="num">2</div></div>
+      <div class="gc"><div class="t">1:30 ~ 2:40</div><h4>과정</h4><p>사람이 한 일과 AI가 한 일. 실수도 그대로.</p><div class="num">3</div></div>
+      <div class="gc"><div class="t">2:40 ~ 4:10</div><h4>시연</h4><p>실제 화면이나 결과물. 녹화본도 함께.</p><div class="num">4</div></div>
+      <div class="gc"><div class="t">4:10 ~ 5:00</div><h4>다음 걸음</h4><p>교회에 어떻게 돌려줄지, 대신 줄일 일은 무엇인지.</p><div class="num">5</div></div>
     </div>
   </div>
 </section>
@@ -454,7 +660,7 @@ footer b{color:#fff}
       <div>
         <div class="eyebrow">Library</div>
         <h2 class="h2">자료실</h2>
-        <p class="lead">원본 파일은 네이버 MYBOX 공유 폴더에 둡니다. 휴대폰 앱으로도 바로 올리고 볼 수 있습니다.</p>
+        <p class="lead">큰 원본 파일은 네이버 MYBOX 공유 폴더에 둡니다. 휴대폰 앱으로도 바로 올리고 볼 수 있습니다.</p>
       </div>
     </div>
     <div class="lib">
@@ -463,7 +669,7 @@ footer b{color:#fff}
         <p>링크가 있으면 누구나 올리고 고칠 수 있습니다. 다른 사람 파일은 지우지 말아 주세요.</p>
         <div class="tree">
           <div>00 공지·발표양식 <span>템플릿, 안내문</span></div>
-          <div>01 국장 작업 샘플 <span>CTS 업무, 교회 샘플 원본</span></div>
+          <div>01 샘플 원본 <span>작업실 샘플의 원본 영상과 파일</span></div>
           <div>10 호남총국 <span>광주, 전남, 전북, 제주</span></div>
           <div>20 중부총국 <span>강원, 대전, 충북</span></div>
           <div>30 영남총국 <span>대구, 경북, 경남, 부산, 울산</span></div>
@@ -472,11 +678,10 @@ footer b{color:#fff}
         </div>
         <a class="btn btn-gold" id="libLink" href="#" target="_blank" rel="noopener" style="margin-top:24px">MYBOX 폴더 열기</a>
       </div>
-      <div class="rules">
-        <div class="rule"><i><svg viewBox="0 0 24 24"><path d="M6 11h12v9H6z"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></i><div><b>교회와 개인 정보는 조심</b><p>목사님과 나눈 대화, 성도 이름, 연락처, 내부 수치는 올리지 않습니다.</p></div></div>
-        <div class="rule"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v6M12 16v.5"/></svg></i><div><b>공개 전에는 허락</b><p>교회 사진, 얼굴, 설교 영상은 교회 허락을 받은 뒤에 밖으로 냅니다.</p></div></div>
-        <div class="rule"><i><svg viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></i><div><b>마지막 확인은 사람이</b><p>AI는 그럴듯하게 틀립니다. 이름, 날짜, 성경 구절은 원본과 대조합니다.</p></div></div>
-        <div class="rule"><i><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></i><div><b>먼저 해 보고 비교</b><p>판단이 필요한 일은 먼저 직접 해 보고 AI 결과와 비교하면 실력이 늡니다.</p></div></div>
+      <div class="svcard" style="justify-content:center">
+        <h3>작업실과 자료실, 이렇게 나눠요</h3>
+        <p>작업실에는 대표 이미지 한 장과 설명, 링크를 올립니다. 영상이나 큰 파일은 MYBOX나 유튜브(일부 공개)에 올리고 그 링크를 붙이면 됩니다.</p>
+        <p>유튜브 링크를 붙이면 대표 이미지를 따로 올리지 않아도 썸네일이 자동으로 나옵니다.</p>
       </div>
     </div>
   </div>
@@ -486,41 +691,44 @@ footer b{color:#fff}
 
 <footer>
   <div class="wrap">
-    <div><b>AI First 엑소더스 랩</b> · CTS 광역본부 콘텐츠지원국</div>
+    <div><b>AI First 엑소더스 랩</b> · CTS 광역본부</div>
     <div>교회에서 받아, AI로 키워, 교회에 돌려줍니다</div>
   </div>
 </footer>
 
 <nav class="tabbar auth-only hide">
-  <a href="#works"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>작업실</a>
-  <a href="#board"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg>프로젝트</a>
-  <a href="#" class="cta" onclick="openForm();return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>등록</a>
-  <a href="#schedule"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>일정</a>
-  <a href="#library"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>자료실</a>
+  <a href="#today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>오늘</a>
+  <a href="#guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></svg>가이드</a>
+  <a href="#" class="cta" onclick="openSample();return false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>올리기</a>
+  <a href="#gallery"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>작업실</a>
+  <a href="#board"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>12.7</a>
 </nav>
 
 <div class="modal" id="mDetail" onclick="if(event.target===this)closeM('mDetail')"><div class="sheet"><button class="x" onclick="closeM('mDetail')">×</button><div id="detail"></div></div></div>
 <div class="modal" id="mForm" onclick="if(event.target===this)closeM('mForm')"><div class="sheet narrow"><button class="x" onclick="closeM('mForm')">×</button><div class="form" id="formBox"></div></div></div>
 <div class="modal" id="mCheer" onclick="if(event.target===this)closeM('mCheer')"><div class="sheet narrow"><button class="x" onclick="closeM('mCheer')">×</button><div class="form" id="cheerBox"></div></div></div>
 <div class="modal" id="mProj" onclick="if(event.target===this)closeM('mProj')"><div class="sheet narrow"><button class="x" onclick="closeM('mProj')">×</button><div class="form" id="projBox"></div></div></div>
+<div class="modal" id="mSurvey"><div class="sheet narrow"><button class="x" onclick="closeM('mSurvey')">×</button><div class="form" id="svBox"></div></div></div>
 <div class="toast" id="toast"></div>
 <div class="loading" id="loading"><div class="spin"></div></div>
 
 <script>
 const API_URL = 'https://script.google.com/macros/s/AKfycbwVR01k_PeOCcUMYkhKlFKtLYOPTqoriUyBSePfIQAx0Z_mF-VDpCVgI0Xs6caydSWvvw/exec';
 let KEY = localStorage.getItem('exo_key') || '';
-let DB = null;
-const S = { group: '전체', cat: '전체', view: 'card', all: false };
+let DB = null; const IMG = {};
+const S = { view: 'card', all: false };
 const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const COLORS = ['#14223A', '#8A6A2F', '#1F5E4B', '#5B3F8C', '#9A3B2E', '#2D5B8A', '#6B5B3E', '#3E6B5B'];
 const avColor = s => COLORS[[...String(s)].reduce((a, c) => a + c.charCodeAt(0), 0) % COLORS.length];
 const initial = s => String(s || '?').replace(/^예시\)\s*/, '').trim().slice(0, 1);
+const DEVICE = localStorage.getItem('exo_dev') || (() => { const d = 'D' + Math.random().toString(36).slice(2, 10) + Date.now().toString(36); localStorage.setItem('exo_dev', d); return d; })();
 function toast(m) { const t = $('#toast'); t.textContent = m; t.classList.add('on'); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('on'), 2400); }
 function loading(on) { $('#loading').classList.toggle('on', on); }
 function openM(id) { $('#' + id).classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeM(id) { $('#' + id).classList.remove('open'); document.body.style.overflow = ''; const v = $('#' + id + ' video'); if (v) v.pause(); }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal.open').forEach(m => closeM(m.id)); });
+function copyText(el) { const t = el.innerText.replace(/^.*\n/, ''); navigator.clipboard.writeText(t).then(() => toast('복사했습니다. 어사이드나 AI 대화창에 붙여 넣으세요.')).catch(() => toast('복사하지 못했습니다. 길게 눌러 복사해 주세요.')); }
 
 async function api(action, data) {
   const res = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ key: KEY, action, data }) });
@@ -538,79 +746,318 @@ async function login(e) {
   try { await api('load'); localStorage.setItem('exo_key', KEY); } catch (err) { $('#gateErr').textContent = err.message; }
 }
 function unlock() { $('#gate').classList.add('hide'); document.querySelectorAll('.auth-only').forEach(e => e.classList.remove('hide')); }
+function kstToday() { return new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Seoul' })); }
+function ddays(dstr) { const t = kstToday(); t.setHours(0, 0, 0, 0); const d = new Date(dstr + 'T00:00:00'); return Math.round((d - t) / 864e5); }
+const WD = '일월화수목금토';
 
-function ddays(dstr) { const t = new Date(new Date().toLocaleString('en-US', { timeZone: 'Asia/Seoul' })); t.setHours(0, 0, 0, 0); const d = new Date(dstr + 'T00:00:00'); return Math.round((d - t) / 864e5); }
+/* ---------- media ---------- */
+function ytId(u) { const m = String(u || '').match(/(?:youtu\.be\/|v=|shorts\/|embed\/)([\w-]{11})/); return m ? m[1] : ''; }
+function imgSrc(s) {
+  const im = String(s.img || '');
+  if (im.startsWith('repo:')) return 't_' + im.slice(5) + '.jpg';
+  if (im === 'sheet') return IMG[s.id] || '';
+  const y = ytId(s.link); if (y) return `https://i.ytimg.com/vi/${y}/hqdefault.jpg`;
+  return '';
+}
+function typo(s, i) {
+  const t = ['', 't2', 't3'][i % 3];
+  return `<div class="typo ${t}"><div class="ic">${esc(s.cat || 'SAMPLE')}</div><div class="big">${esc(s.title)}</div><div class="lines"><i style="width:90%"></i><i style="width:70%"></i><i style="width:80%"></i></div></div>`;
+}
+function mediaHtml(s, i, withVid) {
+  const src = imgSrc(s);
+  if (!src) return typo(s, i || 0);
+  return `<img loading="lazy" src="${esc(src)}" alt="" data-sid="${esc(s.id)}">` + (withVid && s.vid ? `<video muted playsinline loop preload="none" data-src="v_${esc(s.vid)}.mp4"></video>` : '');
+}
+async function loadSheetImgs() {
+  const ids = DB.samples.filter(s => s.img === 'sheet' && !IMG[s.id]).map(s => s.id);
+  if (!ids.length) return;
+  try { const r = await fetch(API_URL, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify({ key: KEY, action: 'imgs', data: { ids } }) }); const j = await r.json(); Object.assign(IMG, j.imgs || {}); renderToday(); renderGallery(); } catch (e) {}
+}
 
 function renderAll() {
   unlock();
   const c = DB.conf || {};
-  const fest = c['페스티벌 날짜'] || '2026-12-07';
-  const dd = ddays(fest);
+  const dd = ddays(c['페스티벌 날짜'] || '2026-12-07');
   $('#ddayBadge').textContent = dd > 0 ? 'D-' + dd : dd === 0 ? 'D-DAY' : '종료';
+  const t = kstToday();
+  $('#todayLine').textContent = `${t.getMonth() + 1}월 ${t.getDate()}일 ${WD[t.getDay()]}요일 · 오늘의 결과물과 팁이 새로 올라왔습니다`;
   $('#notice').textContent = c['공지'] || '';
   $('#libLink').href = c['자료실 링크'] || '#';
-  const real = DB.projects.filter(p => !String(p.name).startsWith('예시)'));
-  const goal = Number(c['목표 인원'] || 46);
-  $('#sProj').innerHTML = real.length + '<small>/' + goal + '</small>';
-  const wk = Date.now() - 7 * 864e5;
-  $('#sWeek').textContent = DB.logs.filter(l => new Date(String(l.at).replace(' ', 'T') + ':00+09:00').getTime() > wk).length;
-  $('#sCheer').textContent = DB.cheers.length;
-  $('#sShow').textContent = DB.showcase.length;
-  renderShowcase(); renderBoard(); renderFeed(); renderTimeline();
+  renderHeroCta(); renderToday(); renderSurveyCard(); renderGallery(); renderBoard(); renderFeed(); renderTimeline();
+  loadSheetImgs();
+}
+const svOpen = () => { const dl = (DB.conf || {})['설문 마감'] || '2026-11-15'; return ddays(dl) >= 0; };
+const svDone = () => !!localStorage.getItem('exo_sv_done');
+function renderHeroCta() {
+  const b = [];
+  if (svOpen() && !svDone()) b.push(`<button class="btn btn-gold" onclick="openSurvey()">워크숍 설문하기 (3분)</button>`);
+  b.push(`<button class="btn ${b.length ? 'btn-ghost' : 'btn-gold'}" onclick="openSample()">내 샘플 올리기</button>`);
+  b.push(`<a class="btn btn-ghost" href="#guide">쉬운 사용 가이드</a>`);
+  $('#heroCta').innerHTML = b.join('');
 }
 
-/* ---------- showcase ---------- */
-function renderShowcase() {
-  const groups = ['전체', ...new Set(DB.showcase.map(s => s.group))];
-  $('#scGroup').innerHTML = groups.map(g => `<button class="chip ${S.group === g ? 'on' : ''}" onclick="S.group='${esc(g)}';renderShowcase()">${esc(g)}</button>`).join('');
-  const cats = ['전체', ...new Set(DB.showcase.filter(s => S.group === '전체' || s.group === S.group).map(s => s.cat))];
-  if (!cats.includes(S.cat)) S.cat = '전체';
-  $('#scCat').innerHTML = cats.map(g => `<button class="chip ${S.cat === g ? 'on' : ''}" onclick="S.cat='${esc(g)}';renderShowcase()">${esc(g === '전체' ? '모든 분야' : g)}</button>`).join('');
-  const list = DB.showcase.filter(s => (S.group === '전체' || s.group === S.group) && (S.cat === '전체' || s.cat === S.cat));
-  const lim = (S.all || S.group !== '전체' || S.cat !== '전체') ? list.length : (innerWidth < 760 ? 6 : 8);
-  $('#scMore').innerHTML = list.length > lim ? `<button class="btn btn-line" onclick="S.all=true;renderShowcase()">작업 ${list.length}개 모두 보기</button>` : '';
-  $('#scGrid').innerHTML = list.slice(0, lim).map((s, i) => `
+/* ---------- today ---------- */
+function todayPick() { const p = DB.picks.filter(x => x.date === DB.today).pop() || DB.picks[DB.picks.length - 1]; return p; }
+function renderToday() {
+  const p = todayPick();
+  const s = p && DB.samples.find(x => x.id === p.sid);
+  if (!s) { $('#pickBox').innerHTML = `<div class="pickcard" style="grid-template-columns:1fr"><div class="c"><span class="badge-ai"><i></i>오늘의 결과물</span><h2>첫 샘플을 기다립니다</h2><p class="why">작업실에 샘플이 올라오면 매일 아침 AI가 하나를 골라 함께 배울 점을 정리합니다.</p><button class="btn btn-gold" onclick="openSample()">내 샘플 올리기</button></div></div>`; }
+  else {
+    const learn = String(p.learn || '').split('\n').filter(Boolean).map(l => `<div><span>${esc(l)}</span></div>`).join('');
+    const isAI = !/규칙/.test(p.method || '');
+    $('#pickBox').innerHTML = `<article class="pickcard">
+      <div class="m">${mediaHtml(s, 0, false)}</div>
+      <div class="c">
+        <span class="badge-ai"><i></i>${isAI ? 'AI가 고른 ' : ''}오늘의 결과물 · ${esc(String(p.date).slice(5).replace('-', '.'))}</span>
+        <h2>${esc(s.title)}</h2>
+        <div class="who2"><span class="av" style="background:${avColor(s.name)}">${esc(initial(s.name))}</span><div><b>${esc(s.name)}</b><small>${esc([s.branch || s.hq, s.role].filter(Boolean).join(' · '))}</small></div></div>
+        <p class="why">${esc(p.why)}</p>
+        ${learn ? `<div class="learn">${learn}</div>` : ''}
+        ${p.apply ? `<div class="apply"><b>내 일에 적용해 보기</b>${esc(p.apply)}</div>` : ''}
+        <div class="acts" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px">
+          <button class="btn btn-dark btn-sm" onclick="openShow('${esc(s.id)}')">자세히 보기</button>
+          <button class="react" onclick="cheer('${esc(s.id)}','응원')">${IC.heart} 응원 <span class="c">${cnt(s.id, '응원')}</span></button>
+          <button class="react" onclick="cheer('${esc(s.id)}','아이디어')">${IC.chat} 질문·아이디어 <span class="c">${cnt(s.id, '아이디어')}</span></button>
+        </div>
+      </div></article>`;
+  }
+  const tips = DB.tips || [];
+  const tip = tips.find(x => x.date === DB.today) || tips.filter(x => x.date <= DB.today).pop() || tips[0];
+  $('#tipBox').innerHTML = tip ? `<div class="t">오늘의 팁 · ${esc(tip.tag)}</div><h3>${esc(tip.title)}</h3><p>${esc(tip.body)}</p>${tip.try ? `<div class="prompt"><small>따라 해 보기</small>${esc(tip.try)}</div><button class="copy" onclick="copyText(this.previousElementSibling)">지시문 복사</button>` : ''}` : '';
+  const sv = DB.survey || {}, goal = Number((DB.conf || {})['목표 인원'] || 46);
+  const realProj = DB.projects.filter(p => !String(p.name).startsWith('예시)')).length;
+  $('#svMini').innerHTML = `<h3>오늘의 광역본부</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+      <div><div class="meter"><b>${sv.count || 0}</b><span>/${goal}</span></div><p>설문 참여</p></div>
+      <div><div class="meter"><b>${DB.samples.length}</b></div><p>작업실 샘플</p></div>
+      <div><div class="meter"><b>${realProj}</b></div><p>발표 주제</p></div>
+    </div>
+    ${svOpen() ? (svDone() ? `<span class="done-chip"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg> 설문에 참여했습니다</span><button class="btn btn-line btn-sm" onclick="openSurvey()">응답 고치기</button>` : `<button class="btn btn-gold" onclick="openSurvey()">워크숍 설문하기 (3분)</button>`) : ''}`;
+}
+const IC = {
+  heart: '<svg class="ic" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>',
+  hand: '<svg class="ic" viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg>',
+  chat: '<svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>'
+};
+const cnt = (id, kind) => DB.cheers.filter(c => c.pid === id && c.kind === kind).length;
+
+/* ---------- survey ---------- */
+function renderSurveyCard() {
+  const c = DB.conf || {}, dl = c['설문 마감'] || '2026-11-15', d = new Date(dl + 'T00:00:00');
+  $('#svIntro').textContent = (c['설문 안내'] || '') + ` 마감 ${d.getMonth() + 1}월 ${d.getDate()}일(${WD[d.getDay()]}).`;
+  $('#svCta').innerHTML = svOpen() ? (svDone() ? `<span class="done-chip" style="color:#7BE0AE"><svg class="ic" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg> 참여해 주셔서 감사합니다</span><button class="btn btn-ghost btn-sm" onclick="openSurvey()">응답 고치기</button>` : `<button class="btn btn-gold" onclick="openSurvey()">설문 시작하기</button><span style="color:rgba(255,255,255,.6);font-size:14px;align-self:center">지금까지 ${DB.survey.count || 0}명 참여</span>`) : `<span style="color:rgba(255,255,255,.7)">설문이 마감되었습니다. 참여해 주셔서 감사합니다.</span>`;
+}
+const SV = JSON.parse(localStorage.getItem('exo_sv') || '{}');
+let svStep = 0;
+const star = (k, labels) => `<div class="stars" data-k="${k}">${[1, 2, 3, 4, 5].map(n => `<button type="button" class="${Number(SV[k]) === n ? 'on' : ''}" onclick="svSet('${k}',${n},this)">${n}<small>${labels[n - 1] || ''}</small></button>`).join('')}</div>`;
+const one = (k, arr) => `<div class="opts" data-k="${k}">${arr.map(v => `<button type="button" class="${SV[k] === v ? 'on' : ''}" onclick="svOne('${k}',this)">${esc(v)}</button>`).join('')}</div>`;
+const many = (k, arr) => `<div class="opts" data-k="${k}">${arr.map(v => `<button type="button" class="${String(SV[k] || '').split(', ').includes(v) ? 'on' : ''}" onclick="svMany('${k}',this)">${esc(v)}</button>`).join('')}</div>`;
+const txt = (k, ph) => `<textarea oninput="SV['${k}']=this.value;svSave()" placeholder="${esc(ph)}">${esc(SV[k] || '')}</textarea>`;
+function svSave() { localStorage.setItem('exo_sv', JSON.stringify(SV)); }
+function svSet(k, n, el) { SV[k] = n; svSave(); el.parentNode.querySelectorAll('button').forEach(b => b.classList.toggle('on', b === el)); }
+function svOne(k, el) { SV[k] = el.textContent; svSave(); el.parentNode.querySelectorAll('button').forEach(b => b.classList.toggle('on', b === el)); }
+function svMany(k, el) { el.classList.toggle('on'); SV[k] = [...el.parentNode.querySelectorAll('button.on')].map(b => b.textContent).join(', '); svSave(); }
+const SAT = ['아쉬움', '', '보통', '', '아주 좋음'];
+const STEPS = [
+  () => `<h2>나에 대해</h2><p class="sub">이름은 적지 않아도 됩니다. 총국과 직무는 결과를 나눠 보는 데만 씁니다.</p>
+    <div class="q"><label>이름 <small>선택</small></label><input type="text" value="${esc(SV.name || '')}" oninput="SV.name=this.value;svSave()" placeholder="비워 두면 익명"></div>
+    <div class="q"><label>총국</label>${one('hq', DB.lists['총국'] || ['호남총국', '중부총국', '영남총국', '본부'])}</div>
+    <div class="q"><label>직무</label>${one('role', DB.lists['직무'] || [])}</div>
+    <div class="q"><label>평소 AI를 얼마나 쓰셨나요?</label>${one('level', DB.lists['AI 사용 정도'] || ['거의 처음', '가끔 써 봄', '일주일에 몇 번', '거의 매일'])}</div>`,
+  () => `<h2>강의와 실습 평가</h2><p class="sub">1점은 아쉬움, 5점은 아주 좋음입니다.</p>
+    <div class="q"><label>워크숍 전체 만족도 <small>필수</small></label>${star('overall', SAT)}</div>
+    <div class="q"><label>오전 강의(AI 원리, 어사이드 소개)는 이해하기 쉬웠나요?</label>${star('am', ['어려움', '', '보통', '', '쉬움'])}</div>
+    <div class="q"><label>오후 실습은 내 일에 도움이 됐나요?</label>${star('pm', SAT)}</div>
+    <div class="q"><label>난이도는 어땠나요?</label>${one('difficulty', ['너무 쉬움', '조금 쉬움', '알맞음', '조금 어려움', '너무 어려움'])}</div>
+    <div class="q"><label>강사 전달력</label>${star('speaker', SAT)}</div>
+    <div class="q"><label>시간 배분(강의와 실습 비율, 쉬는 시간)</label>${star('timing', SAT)}</div>`,
+  () => `<h2>실습 돌아보기</h2><p class="sub">여러 개 골라도 됩니다.</p>
+    <div class="q"><label>가장 도움이 된 순서</label>${many('best', ['AI 원리 설명', '어사이드 설치·연결', '실습 1 기사 작성', '실습 2 블로그·SNS', '실습 3 직무별 실습', '영상 편집 자동화 시연', '국장 작업 사례'])}</div>
+    <div class="q"><label>어려웠던 점</label>${many('hard', ['설치·로그인', '지시하는 방법', '결과 확인·검수', '진행 속도', '노트북·인터넷 환경', '특별히 없음'])}</div>
+    <div class="q"><label>가장 좋았던 점</label>${txt('good', '예: 실제로 기사가 올라가는 걸 보니 감이 왔다')}</div>
+    <div class="q"><label>아쉬웠던 점, 바꾸면 좋을 점</label>${txt('bad', '예: 실습 시간이 부족했다, 윈도우 설치 안내가 더 필요하다')}</div>`,
+  () => `<h2>우리 업무, 사역, 비전</h2><p class="sub">이 답이 12월 7일 발표와 2027년 계획의 바탕이 됩니다.</p>
+    <div class="q"><label>내 업무에 어떤 도움이 될 것 같나요?</label>${txt('work', '예: 주보 확인과 기사 초안에 쓰던 시간을 줄여 교회 방문을 늘릴 수 있다')}</div>
+    <div class="q"><label>교회를 섬기는 우리 사역에는 어떤 도움이 될까요?</label>${txt('ministry', '예: 작은 교회 소식도 빠르게 알려 드릴 수 있다')}</div>
+    <div class="q"><div class="vision">"교회에서 받아, AI로 키워, 교회에 돌려준다"</div><label>엑소더스 비전에 얼마나 공감하시나요?</label>${star('vision', ['잘 모르겠음', '', '보통', '', '크게 공감'])}</div>
+    <div class="q"><label>비전에 대한 생각, 걱정되는 점</label>${txt('visionWhy', '솔직하게 적어 주세요')}</div>`,
+  () => `<h2>앞으로</h2><p class="sub">원하는 것을 알려 주시면 가이드와 도움을 그쪽으로 채웁니다.</p>
+    <div class="q"><label>앞으로 해보고 싶은 것</label>${many('want', ['기사·보도자료', '설교·교회 쇼츠', '교회 소식 자동 수집', '블로그·SNS 운영', '행정·공문·기안', '후원·교회 관리', '웹페이지 만들기', '디자인·포스터', '기타'])}</div>
+    <div class="q"><label>12월 7일까지 내가 만들어 보고 싶은 것</label>${txt('myplan', '한 줄이면 충분합니다')}</div>
+    <div class="q"><label>필요한 도움</label>${many('support', ['짧은 영상 가이드', '온라인 질문 시간', '1:1 도움', '지사 방문 실습', '질문용 카톡방'])}</div>
+    <div class="q"><label>하고 싶은 말</label>${txt('free', '자유롭게')}</div>`
+];
+function openSurvey() { svStep = 0; drawSurvey(); openM('mSurvey'); }
+function drawSurvey() {
+  $('#svBox').innerHTML = `<div class="stepper">${STEPS.map((_, i) => `<i class="${i <= svStep ? 'on' : ''}"></i>`).join('')}</div>
+    <div style="font-size:12px;font-weight:800;color:var(--gold);letter-spacing:.1em">${svStep + 1} / ${STEPS.length}</div>
+    ${STEPS[svStep]()}
+    <div class="ferr" id="svErr"></div>
+    <div class="factions">${svStep ? `<button class="btn btn-line" onclick="svStep--;drawSurvey();$('#mSurvey .sheet').scrollTop=0">이전</button>` : ''}${svStep < STEPS.length - 1 ? `<button class="btn btn-gold" onclick="svNext()">다음</button>` : `<button class="btn btn-gold" onclick="svSubmit()">제출하기</button>`}</div>`;
+}
+function svNext() { if (svStep === 1 && !SV.overall) { $('#svErr').textContent = '전체 만족도를 골라 주세요.'; return; } svStep++; drawSurvey(); $('#mSurvey .sheet').scrollTop = 0; }
+async function svSubmit() {
+  if (!SV.overall) { svStep = 1; drawSurvey(); $('#svErr').textContent = '전체 만족도를 골라 주세요.'; return; }
+  loading(true);
+  try {
+    await api('survey', Object.assign({}, SV, { device: DEVICE }));
+    localStorage.setItem('exo_sv_done', '1');
+    $('#svBox').innerHTML = `<div class="thanks"><div class="ok"><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></div><h2>고맙습니다</h2><p>여러분의 답으로 12월 7일까지의 가이드와 도움을 채우겠습니다.</p>
+      <div class="factions" style="justify-content:center"><button class="btn btn-line" onclick="closeM('mSurvey');openForm()">12.7 발표 주제 등록</button><button class="btn btn-gold" onclick="closeM('mSurvey');openSample()">내 샘플 올리기</button></div></div>`;
+    renderAll();
+  } catch (e) { $('#svErr').textContent = e.message; } finally { loading(false); }
+}
+
+/* ---------- gallery ---------- */
+function renderGallery() {
+  const gc = $('#gCat'), gu = $('#gUse');
+  if (gc.options.length <= 1) { (DB.lists['분야'] || []).forEach(v => gc.add(new Option(v, v))); (DB.lists['용도'] || ['CTS 업무', '교회 섬김']).forEach(v => gu.add(new Option(v, v))); }
+  const q = $('#gQ').value.trim().toLowerCase();
+  let list = DB.samples.filter(s => (!gc.value || s.cat === gc.value) && (!gu.value || s.use === gu.value) && (!q || [s.name, s.title, s.one, s.tools, s.branch].join(' ').toLowerCase().includes(q)));
+  const ch = id => DB.cheers.filter(c => c.pid === id).length;
+  list.sort((a, b) => $('#gSort').value === 'cheer' ? ch(b.id) - ch(a.id) : String(b.created).localeCompare(String(a.created)));
+  const pickIds = new Set(DB.picks.map(p => p.sid)); const tp = todayPick();
+  const lim = (S.all || q || gc.value || gu.value) ? list.length : (innerWidth < 760 ? 6 : 8);
+  $('#scMore').innerHTML = list.length > lim ? `<button class="btn btn-line" onclick="S.all=true;renderGallery()">샘플 ${list.length}개 모두 보기</button>` : '';
+  $('#scGrid').innerHTML = list.length ? list.slice(0, lim).map((s, i) => `
     <article class="sc" onclick="openShow('${esc(s.id)}')" onmouseenter="hoverPlay(this,1)" onmouseleave="hoverPlay(this,0)">
       <div class="media">
-        <span class="tag pill ${s.group === '교회 샘플' ? 'tag-gold' : 'tag-dark'}">${esc(s.cat)}</span>
-        ${mediaHtml(s, i)}
+        <span class="tag pill ${s.use === '교회 섬김' ? 'tag-gold' : 'tag-dark'}">${esc(s.cat || '샘플')}</span>
+        ${tp && tp.sid === s.id ? '<span class="ribbon">오늘의 결과물</span>' : pickIds.has(s.id) ? '<span class="ribbon" style="background:rgba(11,18,32,.75)">선정작</span>' : ''}
+        ${mediaHtml(s, i, true)}
         ${s.vid ? '<span class="play"></span>' : ''}
       </div>
       <div class="body">
         <h3>${esc(s.title)}</h3>
         <p>${esc(s.one)}</p>
-        <div class="meta"><span>${esc(String(s.date).slice(5).replace('-', '.'))}</span><span>${esc(s.group)}</span></div>
+        <div class="meta"><span class="author"><span class="av" style="background:${avColor(s.name)}">${esc(initial(s.name))}</span>${esc(s.name)} · ${esc(s.branch || s.hq || '')}</span><span>${ch(s.id) ? '응원 ' + ch(s.id) : ''}</span></div>
       </div>
-    </article>`).join('');
+    </article>`).join('') : '<div class="empty">조건에 맞는 샘플이 없습니다.</div>';
+  const past = DB.picks.slice().reverse().slice(0, 14).map(p => ({ p, s: DB.samples.find(x => x.id === p.sid) })).filter(x => x.s);
+  $('#pickStrip').innerHTML = past.length ? `<div style="font-size:13px;font-weight:800;color:#667085;margin-bottom:10px">지금까지의 오늘의 결과물</div><div class="picks">${past.map(({ p, s }) => { const src = imgSrc(s); return `<div class="pk" onclick="openShow('${esc(s.id)}')">${src ? `<img src="${esc(src)}" alt="">` : '<div class="ph"></div>'}<div><small>${esc(String(p.date).slice(5).replace('-', '.'))}</small><b>${esc(s.title)}</b><small style="color:#98A2B3;font-weight:600">${esc(s.name)}</small></div></div>`; }).join('')}</div>` : '';
 }
-function mediaHtml(s, i) {
-  if (s.img) return `<img loading="lazy" src="t_${esc(s.img)}.jpg" alt="">` + (s.vid ? `<video muted playsinline loop preload="none" data-src="v_${esc(s.vid)}.mp4"></video>` : '');
-  const t = ['', 't2', 't3'][i % 3];
-  return `<div class="typo ${t}"><div class="ic">${esc(s.cat).toUpperCase()}</div><div class="big">${esc(s.title)}</div><div class="lines"><i style="width:90%"></i><i style="width:70%"></i><i style="width:80%"></i></div></div>`;
-}
+['#gCat', '#gUse', '#gSort'].forEach(s => document.addEventListener('change', e => { if (e.target.matches(s)) renderGallery(); }));
+document.addEventListener('input', e => { if (e.target.id === 'gQ') renderGallery(); });
 function hoverPlay(el, on) {
   if (matchMedia('(hover:none)').matches) return;
   const v = el.querySelector('video'); if (!v) return;
-  if (on) { if (!v.src) { v.src = v.dataset.src; v.oncanplay = () => v.classList.add('ready'); } v.play().catch(() => {}); }
-  else { v.pause(); }
+  if (on) { if (!v.src) { v.src = v.dataset.src; v.oncanplay = () => v.classList.add('ready'); } v.play().catch(() => {}); } else v.pause();
 }
 function openShow(id) {
-  const s = DB.showcase.find(x => x.id === id); if (!s) return;
-  const steps = String(s.steps || '').split('\n').filter(Boolean).map(l => { const [w, ...r] = l.split('|'); const ai = /AI/i.test(w); return `<div class="step"><span class="who ${ai ? 'a' : 'h'}">${ai ? 'AI' : '사람'}</span><span>${esc(r.join('|') || w)}</span></div>`; }).join('');
-  const media = s.vid ? `<video src="v_${esc(s.vid)}.mp4" poster="t_${esc(s.img)}.jpg" autoplay muted loop playsinline></video>` : s.img ? `<img src="t_${esc(s.img)}.jpg" alt="">` : mediaHtml(s, 0);
+  const s = DB.samples.find(x => x.id === id); if (!s) return;
+  const steps = String(s.steps || '').split('\n').filter(Boolean).map(l => { const p = l.split('|'); const has = p.length > 1; const ai = has && /AI/i.test(p[0]); return `<div class="step"><span class="who ${ai ? 'a' : 'h'}">${has ? (ai ? 'AI' : '사람') : '•'}</span><span>${esc(has ? p.slice(1).join('|') : l)}</span></div>`; }).join('');
+  const src = imgSrc(s);
+  const media = s.vid ? `<video src="v_${esc(s.vid)}.mp4" poster="${esc(src)}" autoplay muted loop playsinline></video>` : src ? `<img src="${esc(src)}" alt="">` : typo(s, 0);
+  const pk = DB.picks.filter(p => p.sid === id).pop();
+  const cm = DB.cheers.filter(c => c.pid === id && c.text).slice(-12).reverse();
   $('#detail').innerHTML = `<div class="dt"><div class="m">${media}</div><div class="c">
-    <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill">${esc(s.group)}</span><span class="pill">${esc(s.cat)}</span><span class="pill">${esc(s.date)}</span></div>
-    <h2>${esc(s.title)}</h2><p class="one">${esc(s.one)}</p>
-    <div class="steps">${steps}</div>
-    ${s.lesson ? `<div class="lesson"><b>실수와 교훈</b>${esc(s.lesson)}</div>` : ''}
+    <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pill">${esc(s.use || '')}</span><span class="pill">${esc(s.cat || '')}</span><span class="pill">${esc(String(s.created).slice(0, 10))}</span></div>
+    <h2>${esc(s.title)}</h2>
+    <div class="who2" style="margin-top:10px"><span class="av" style="background:${avColor(s.name)}">${esc(initial(s.name))}</span><div><b>${esc(s.name)}</b><small>${esc([s.hq, s.branch, s.role].filter(Boolean).join(' · '))}</small></div></div>
+    <p class="one">${esc(s.one)}</p>
+    ${steps ? `<div class="steps">${steps}</div>` : ''}
+    ${s.lesson ? `<div class="lesson"><b>배운 점과 실수</b>${esc(s.lesson)}</div>` : ''}
+    ${pk && pk.learn ? `<div class="apply" style="margin-top:14px"><b>${esc(String(pk.date).slice(5).replace('-', '.'))} 오늘의 결과물로 같이 배운 점</b>${esc(pk.learn).replace(/\n/g, '<br>')}</div>` : ''}
     <div class="kv">${String(s.tools || '').split(',').filter(Boolean).map(t => `<span class="pill">${esc(t.trim())}</span>`).join('')}${s.time ? `<span class="pill">걸린 시간 ${esc(s.time)}</span>` : ''}</div>
     ${s.note ? `<div class="${/허락|확인|동의|내부|공개 전|필요/.test(s.note) ? 'warnline' : 'infoline'}">${esc(s.note)}</div>` : ''}
-    <div class="acts">${s.link ? `<a class="btn btn-dark btn-sm" href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.linkName || '열기')}</a>` : ''}<a class="btn btn-line btn-sm" href="${esc((DB.conf || {})['자료실 링크'] || '#')}" target="_blank" rel="noopener">원본은 자료실 01번 폴더</a></div>
+    <div class="acts">${s.link ? `<a class="btn btn-dark btn-sm" href="${esc(s.link)}" target="_blank" rel="noopener">${esc(s.linkName || '결과물 보기')}</a>` : ''}
+      <button class="react" onclick="cheer('${esc(s.id)}','응원')">${IC.heart} 응원 <span class="c">${cnt(s.id, '응원')}</span></button>
+      <button class="react" onclick="cheer('${esc(s.id)}','아이디어')">${IC.chat} 질문·아이디어</button>
+      <button class="react" onclick="editSample('${esc(s.id)}')">고치기</button></div>
+    ${cm.length ? `<div class="fsec" style="margin-top:22px">질문과 아이디어</div>${cm.map(c => `<div class="comment"><small>${esc(c.from)} · ${esc(c.at)}</small><div>${esc(c.text)}</div></div>`).join('')}` : ''}
   </div></div>`;
   openM('mDetail');
 }
 
-/* ---------- board ---------- */
+/* sample form */
+const TOOLS = () => DB.lists['도구'] || ['Aside', 'Claude', 'ChatGPT', 'Gemini', '캡컷', 'Canva', 'ElevenLabs', '기타'];
+const sel = (n, name, cur) => `<select name="${name}"><option value=""></option>${(DB.lists[n] || []).map(v => `<option ${v === cur ? 'selected' : ''}>${esc(v)}</option>`).join('')}</select>`;
+function stepsToText(s) { return String(s || '').split('\n').filter(Boolean).map(l => { const p = l.split('|'); return p.length > 1 ? (/AI/i.test(p[0]) ? 'AI: ' : '사람: ') + p.slice(1).join('|') : l; }).join('\n'); }
+function textToSteps(t) { return String(t || '').split('\n').map(l => l.trim()).filter(Boolean).map(l => { const m = l.match(/^(사람|AI|ai|Ai)\s*[:：]\s*(.*)$/); return m ? (/ai/i.test(m[1]) ? 'AI|' : '사람|') + m[2] : l; }).join('\n'); }
+function sampleFields(s = {}) {
+  const me = JSON.parse(localStorage.getItem('exo_profile') || '{}');
+  const v = k => esc(s[k] ?? me[k] ?? '');
+  const tools = String(s.tools || '').split(',').map(x => x.trim());
+  return `
+    <div class="fsec">나</div>
+    <div class="f"><label>이름 <em>*</em></label><input name="name" value="${v('name')}" required></div>
+    <div class="f"><label>직무</label>${sel('직무', 'role', s.role ?? me.role)}</div>
+    <div class="f"><label>총국</label>${sel('총국', 'hq', s.hq ?? me.hq)}</div>
+    <div class="f"><label>지사·부서</label>${sel('지사·부서', 'branch', s.branch ?? me.branch)}</div>
+    <div class="fsec">샘플</div>
+    <div class="f full"><label>제목 <em>*</em></label><input name="title" value="${esc(s.title || '')}" placeholder="예: 주보 사진 한 장으로 교회 소식 기사 초안" required></div>
+    <div class="f full"><label>한 줄 설명</label><input name="one" value="${esc(s.one || '')}" placeholder="무엇을 누구에게 만들어 주었나요?"></div>
+    <div class="f"><label>분야</label>${sel('분야', 'cat', s.cat)}</div>
+    <div class="f"><label>용도</label>${sel('용도', 'use', s.use)}</div>
+    <div class="f full"><label>대표 이미지 <small>화면 캡처나 사진. 유튜브 링크만 있어도 됩니다</small></label><div class="imgpick"><img id="imgPrev" src="${esc(imgSrc(s))}" alt="" style="${imgSrc(s) ? '' : 'display:none'}"><input type="file" accept="image/*" onchange="pickImg(this)"></div></div>
+    <div class="f full"><label>결과물 링크 <small>유튜브, MYBOX, 투데이N, 웹페이지</small></label><input name="link" value="${esc(s.link || '')}" placeholder="https://"></div>
+    <div class="f full"><label>만든 과정 <small>한 줄에 한 단계. '사람:' 또는 'AI:'로 시작하면 나눠서 보여 줍니다</small></label><textarea name="steps" placeholder="사람: 교회 주보 사진을 찍어 올림&#10;AI: 행사 정보를 뽑아 기사 초안 작성&#10;사람: 교회에 전화로 확인">${esc(stepsToText(s.steps))}</textarea></div>
+    <div class="f full"><label>쓴 도구</label><div class="toolchips" id="toolChips">${TOOLS().map(t => `<button type="button" class="${tools.includes(t) ? 'on' : ''}" onclick="this.classList.toggle('on')">${esc(t)}</button>`).join('')}</div></div>
+    <div class="f"><label>걸린 시간 <small>전과 후</small></label><input name="time" value="${esc(s.time || '')}" placeholder="예: 3시간 → 40분"></div>
+    <div class="f"><label>공개 범위</label><select name="note">${['내부 공유용', '교회 허락 받음', '해당 없음'].map(x => `<option ${x === s.note ? 'selected' : ''}>${x}</option>`).join('')}</select></div>
+    <div class="f full"><label>배운 점, 실수</label><textarea name="lesson" placeholder="다음 사람에게 도움이 될 한마디">${esc(s.lesson || '')}</textarea></div>`;
+}
+let IMGDATA = '';
+function pickImg(inp) {
+  const f = inp.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { const im = new Image(); im.onload = () => {
+    const W = 540, scale = Math.min(1, W / im.width); const c = document.createElement('canvas'); c.width = Math.round(im.width * scale); c.height = Math.round(im.height * scale);
+    c.getContext('2d').drawImage(im, 0, 0, c.width, c.height);
+    let q = 0.78, d = c.toDataURL('image/jpeg', q); while (d.length > 170000 && q > 0.3) { q -= 0.1; d = c.toDataURL('image/jpeg', q); }
+    IMGDATA = d; const p = $('#imgPrev'); p.src = d; p.style.display = '';
+  }; im.src = r.result; };
+  r.readAsDataURL(f);
+}
+function readSample(box) {
+  const o = {}; box.querySelectorAll('[name]').forEach(el => o[el.name] = el.value.trim());
+  o.steps = textToSteps(o.steps);
+  o.tools = [...box.querySelectorAll('#toolChips button.on')].map(b => b.textContent).join(', ');
+  localStorage.setItem('exo_profile', JSON.stringify({ name: o.name, role: o.role, hq: o.hq, branch: o.branch }));
+  return o;
+}
+function openSample() {
+  if (!DB) { $('#pw').focus(); return; }
+  IMGDATA = '';
+  $('#formBox').innerHTML = `<h2>내 샘플 올리기</h2><p class="sub">완성작이 아니어도 됩니다. 써 보면서 만든 것, 실패한 것도 좋은 배움입니다.</p>
+    <form onsubmit="submitSample(event)"><div class="fg">${sampleFields()}
+    <div class="fsec">수정 비밀번호</div>
+    <div class="f"><label>PIN 4자리 <em>*</em> <small>내 샘플을 고칠 때 씁니다</small></label><input name="pin" inputmode="numeric" maxlength="4" pattern="\\d{4}" required></div>
+    </div><div class="ferr" id="fErr"></div><div class="factions"><button type="button" class="btn btn-line" onclick="closeM('mForm')">닫기</button><button class="btn btn-gold">올리기</button></div></form>`;
+  openM('mForm');
+}
+async function submitSample(e) {
+  e.preventDefault(); const d = readSample($('#formBox'));
+  if (!/^\d{4}$/.test(d.pin)) { $('#fErr').textContent = 'PIN은 숫자 4자리입니다.'; return; }
+  if (IMGDATA) d.imgData = IMGDATA;
+  loading(true);
+  try { const r = await api('addSample', d); if (IMGDATA) IMG[r.id] = IMGDATA; closeM('mForm'); toast('올렸습니다. 내일 아침 오늘의 결과물 후보가 됩니다.'); renderGallery(); location.hash = 'gallery'; }
+  catch (err) { $('#fErr').textContent = err.message; } finally { loading(false); }
+}
+function editSample(id) {
+  const s = DB.samples.find(x => x.id === id); closeM('mDetail'); IMGDATA = '';
+  $('#formBox').innerHTML = `<h2>샘플 고치기</h2><p class="sub">${esc(s.title)}</p>
+    <form onsubmit="submitEditSample(event,'${esc(id)}')"><div class="fg">
+    <div class="f full"><label>내 PIN <em>*</em></label><input name="pin" inputmode="numeric" maxlength="6" required></div>
+    ${sampleFields(s)}</div><div class="ferr" id="fErr"></div>
+    <div class="factions"><button type="button" class="btn btn-line" onclick="hideSample('${esc(id)}')">이 샘플 내리기</button><button class="btn btn-gold">저장하기</button></div></form>`;
+  openM('mForm');
+}
+async function submitEditSample(e, id) {
+  e.preventDefault(); const d = readSample($('#formBox')); const pin = d.pin; delete d.pin;
+  if (IMGDATA) d.imgData = IMGDATA;
+  loading(true);
+  try { await api('updateSample', { id, pin, fields: d }); if (IMGDATA) IMG[id] = IMGDATA; closeM('mForm'); toast('저장했습니다.'); renderGallery(); }
+  catch (err) { $('#fErr').textContent = err.message; } finally { loading(false); }
+}
+async function hideSample(id) {
+  const pin = $('#formBox [name=pin]').value.trim(); if (!pin) { $('#fErr').textContent = 'PIN을 먼저 넣어 주세요.'; return; }
+  if (!confirm('작업실에서 이 샘플을 내릴까요? 시트에는 기록이 남습니다.')) return;
+  loading(true);
+  try { await api('updateSample', { id, pin, hide: true, fields: {} }); closeM('mForm'); toast('내렸습니다.'); } catch (err) { $('#fErr').textContent = err.message; } finally { loading(false); }
+}
+
+/* ---------- board (12.7) ---------- */
 const STAGES = () => (DB.lists['단계'] || ['아이디어', '설계', '시제품', '검증', '발표 준비', '완료']);
 function stCls(s) { return 'st st-' + String(s || '아이디어').split(' ')[0]; }
 function renderBoard() {
@@ -638,19 +1085,20 @@ function renderBoard() {
       ${p.help ? `<div class="box help"><b>도움 요청</b>${esc(p.help)}</div>` : ''}
       <div style="display:flex;gap:6px;flex-wrap:wrap">${p.biz ? `<span class="pill pill-gold">${esc(p.biz)}</span>` : ''}${p.tools ? `<span class="pill">${esc(String(p.tools).split(',').slice(0, 2).join(', '))}</span>` : ''}</div>
       <div class="acts">
-        <button class="react" onclick="cheer('${esc(p.id)}','응원')"><svg class="ic" viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg> 응원 <span class="c">${k.응원}</span></button>
-        <button class="react" onclick="cheer('${esc(p.id)}','같이해요')"><svg class="ic" viewBox="0 0 24 24"><path d="M8 12l3 3 5-6"/><circle cx="12" cy="12" r="9"/></svg> 같이해요 <span class="c">${k.같이해요}</span></button>
-        <button class="react" onclick="cheer('${esc(p.id)}','아이디어')"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg> 아이디어 <span class="c">${k.아이디어}</span></button>
+        <button class="react" onclick="cheer('${esc(p.id)}','응원')">${IC.heart} 응원 <span class="c">${k.응원}</span></button>
+        <button class="react" onclick="cheer('${esc(p.id)}','같이해요')">${IC.hand} 같이해요 <span class="c">${k.같이해요}</span></button>
+        <button class="react" onclick="cheer('${esc(p.id)}','아이디어')">${IC.chat} 아이디어 <span class="c">${k.아이디어}</span></button>
         <button class="react" style="margin-left:auto" onclick="openProj('${esc(p.id)}')">자세히</button>
       </div>
-    </article>`; }).join('') : '<div class="empty">조건에 맞는 프로젝트가 없습니다. 첫 번째로 등록해 보세요.</div>'}</div>`;
+    </article>`; }).join('') : '<div class="empty">아직 등록된 발표 주제가 없습니다. 첫 번째로 등록해 보세요.</div>'}</div>`;
 }
 ['#fHq', '#fStage'].forEach(s => document.addEventListener('change', e => { if (e.target.matches(s)) renderBoard(); }));
 document.addEventListener('input', e => { if (e.target.id === 'fQ') renderBoard(); });
 document.querySelectorAll('.seg button').forEach(b => b.onclick = () => { document.querySelectorAll('.seg button').forEach(x => x.classList.remove('on')); b.classList.add('on'); S.view = b.dataset.v; renderBoard(); });
+document.querySelectorAll('#gtabs button').forEach(b => b.onclick = () => { document.querySelectorAll('#gtabs button').forEach(x => x.classList.toggle('on', x === b)); document.querySelectorAll('.gpanel').forEach(p => p.classList.toggle('on', p.id === b.dataset.t)); });
 
 function openProj(id) {
-  const p = DB.projects.find(x => x.id === id); if (!p) return;
+  const p = DB.projects.find(x => x.id === id); if (!p) { openShow(id); return; }
   const logs = DB.logs.filter(l => l.pid === id).slice(-8).reverse();
   const ch = DB.cheers.filter(c => c.pid === id && c.text).slice(-10).reverse();
   const row = (k, v) => v ? `<div class="box" style="margin-top:8px"><b>${k}</b>${esc(v)}</div>` : '';
@@ -659,62 +1107,61 @@ function openProj(id) {
     <h2 style="margin-top:16px">${esc(p.title)}</h2><p class="sub">${esc(p.one)}</p>
     ${row('지금의 문제', p.problem)}${row('만들 결과물', p.output)}${row('쓰는 도구', p.tools)}${row('이번 주 한 일', p.week)}${row('막힌 점·도움 요청', p.help)}${row('사업화 가능성', p.biz)}${row('줄이거나 멈출 일', p.stop)}${row('함께하는 사람', p.team)}
     ${p.link ? `<a class="btn btn-dark btn-sm" style="margin-top:12px" href="${esc(p.link)}" target="_blank" rel="noopener">결과물 보기</a>` : ''}
-    ${logs.length ? `<div class="fsec" style="margin-top:20px">진행 기록</div>${logs.map(l => `<div class="fi" style="grid-template-columns:1fr"><div><small>${esc(l.at)} · ${esc(l.stage)} ${esc(l.progress)}%</small><div>${esc(l.week || '')}</div></div></div>`).join('')}` : ''}
-    ${ch.length ? `<div class="fsec" style="margin-top:20px">응원과 아이디어</div>${ch.map(c => `<div class="fi" style="grid-template-columns:1fr"><div><small>${esc(c.from)} · ${esc(c.kind)} · ${esc(c.at)}</small><div>${esc(c.text)}</div></div></div>`).join('')}` : ''}
+    ${logs.length ? `<div class="fsec" style="margin-top:20px">진행 기록</div>${logs.map(l => `<div class="comment"><small>${esc(l.at)} · ${esc(l.stage)} ${esc(l.progress)}%</small><div>${esc(l.week || '')}</div></div>`).join('')}` : ''}
+    ${ch.length ? `<div class="fsec" style="margin-top:20px">응원과 아이디어</div>${ch.map(c => `<div class="comment"><small>${esc(c.from)} · ${esc(c.kind)} · ${esc(c.at)}</small><div>${esc(c.text)}</div></div>`).join('')}` : ''}
     <div class="factions"><button class="btn btn-line" onclick="cheer('${esc(p.id)}','아이디어')">아이디어 남기기</button><button class="btn btn-gold" onclick="editProj('${esc(p.id)}')">이번 주 진행 적기 / 수정</button></div>`;
   openM('mProj');
 }
-
-/* ---------- forms ---------- */
 const opt = (name, cur) => (DB.lists[name] || []).map(v => `<option ${v === cur ? 'selected' : ''}>${esc(v)}</option>`).join('');
 function fields(p = {}) {
+  const me = JSON.parse(localStorage.getItem('exo_profile') || '{}');
   return `
     <div class="fsec">나</div>
-    <div class="f"><label>이름 <em>*</em></label><input name="name" value="${esc(p.name || '')}" required></div>
-    <div class="f"><label>직무</label><select name="role"><option value=""></option>${opt('직무', p.role)}</select></div>
-    <div class="f"><label>총국</label><select name="hq"><option value=""></option>${opt('총국', p.hq)}</select></div>
-    <div class="f"><label>지사·부서</label><select name="branch"><option value=""></option>${opt('지사·부서', p.branch)}</select></div>
-    <div class="fsec">프로젝트</div>
+    <div class="f"><label>이름 <em>*</em></label><input name="name" value="${esc(p.name || me.name || '')}" required></div>
+    <div class="f"><label>직무</label><select name="role"><option value=""></option>${opt('직무', p.role || me.role)}</select></div>
+    <div class="f"><label>총국</label><select name="hq"><option value=""></option>${opt('총국', p.hq || me.hq)}</select></div>
+    <div class="f"><label>지사·부서</label><select name="branch"><option value=""></option>${opt('지사·부서', p.branch || me.branch)}</select></div>
+    <div class="fsec">발표 주제</div>
     <div class="f full"><label>프로젝트명 <em>*</em></label><input name="title" value="${esc(p.title || '')}" placeholder="예: 주보로 매주 교회 소식 기사 초안 만들기" required></div>
     <div class="f full"><label>한 줄 소개</label><input name="one" value="${esc(p.one || '')}" placeholder="누구에게 무엇을 만들어 주나요?"></div>
     <div class="opt f full"><label>지금의 문제 <small>지금 매주 몇 시간 걸리나요?</small></label><textarea name="problem">${esc(p.problem || '')}</textarea></div>
-    <div class="opt f full"><label>만들 결과물</label><input name="output" value="${esc(p.output || '')}" placeholder="예: 매주 기사 초안 3건, 교회용 쇼츠 1편"></div>
-    <div class="opt f full"><label>쓰는 도구</label><input name="tools" value="${esc(p.tools || '')}" placeholder="예: Aside, Claude, ChatGPT, 캡컷"></div>
+    <div class="opt f full"><label>만들 결과물</label><input name="output" value="${esc(p.output || '')}"></div>
+    <div class="opt f full"><label>쓰는 도구</label><input name="tools" value="${esc(p.tools || '')}" placeholder="예: Aside, Claude, ChatGPT"></div>
     <div class="opt f"><label>사업화 가능성</label><select name="biz"><option value=""></option>${opt('사업화 가능성', p.biz)}</select></div>
     <div class="opt f"><label>12/7 발표</label><select name="present">${['미정', '예', '아니오'].map(v => `<option ${v === p.present ? 'selected' : ''}>${v}</option>`).join('')}</select></div>
-    <div class="opt f full"><label>줄이거나 멈출 일 <small>이 일로 대신 줄일 수 있는 일</small></label><input name="stop" value="${esc(p.stop || '')}"></div>
+    <div class="opt f full"><label>줄이거나 멈출 일</label><input name="stop" value="${esc(p.stop || '')}"></div>
     <div class="fsec">진행</div>
     <div class="f"><label>단계</label><select name="stage">${opt('단계', p.stage || '아이디어')}</select></div>
     <div class="opt f"><label>진척</label><div class="range"><input type="range" name="progress" min="0" max="100" step="5" value="${Number(p.progress) || 0}" oninput="this.nextElementSibling.textContent=this.value+'%'"><b>${Number(p.progress) || 0}%</b></div></div>
     <div class="opt f full"><label>이번 주 한 일</label><textarea name="week">${esc(p.week || '')}</textarea></div>
     <div class="opt f full"><label>막힌 점·도움 요청</label><textarea name="help">${esc(p.help || '')}</textarea></div>
-    <div class="opt f full"><label>결과물 링크 <small>유튜브, MYBOX, 웹페이지 주소</small></label><input name="link" value="${esc(p.link || '')}" placeholder="https://"></div>
-    <div class="f full"><label>함께하는 사람</label><input name="team" value="${esc(p.team || '')}"></div>`;
+    <div class="opt f full"><label>결과물 링크</label><input name="link" value="${esc(p.link || '')}" placeholder="https://"></div>
+    <div class="opt f full"><label>함께하는 사람</label><input name="team" value="${esc(p.team || '')}"></div>`;
 }
 function readForm(box) { const o = {}; box.querySelectorAll('[name]').forEach(el => o[el.name] = el.value.trim()); return o; }
 function openForm() {
   if (!DB) { $('#pw').focus(); return; }
-  $('#formBox').innerHTML = `<h2>내 프로젝트 등록</h2><p class="sub">한 줄 아이디어만 적어도 됩니다. 나머지는 매주 채워 가면 됩니다.</p>
+  $('#formBox').innerHTML = `<h2>내 발표 주제 등록</h2><p class="sub">한 줄 아이디어만 적어도 됩니다. 나머지는 매주 채워 가면 됩니다.</p>
     <form onsubmit="submitNew(event)"><div class="fg compact" id="newFg">${fields()}
     <div class="f full" id="moreBtn"><button type="button" class="btn btn-line btn-sm" onclick="$('#newFg').classList.remove('compact');this.parentNode.remove()">문제, 도구, 사업화 가능성까지 자세히 적기 (선택)</button></div>
     <div class="fsec">수정 비밀번호</div>
-    <div class="f"><label>PIN 4자리 <em>*</em> <small>내 카드를 고칠 때 씁니다</small></label><input name="pin" inputmode="numeric" maxlength="4" pattern="\\d{4}" required></div>
+    <div class="f"><label>PIN 4자리 <em>*</em></label><input name="pin" inputmode="numeric" maxlength="4" pattern="\\d{4}" required></div>
     </div><div class="ferr" id="fErr"></div><div class="factions"><button type="button" class="btn btn-line" onclick="closeM('mForm')">닫기</button><button class="btn btn-gold">등록하기</button></div></form>`;
   openM('mForm');
 }
 async function submitNew(e) {
   e.preventDefault(); const d = readForm($('#formBox'));
   if (!/^\d{4}$/.test(d.pin)) { $('#fErr').textContent = 'PIN은 숫자 4자리입니다.'; return; }
+  localStorage.setItem('exo_profile', JSON.stringify({ name: d.name, role: d.role, hq: d.hq, branch: d.branch }));
   loading(true);
   try { const r = await api('addProject', d); closeM('mForm'); toast('등록했습니다. 카드 번호 ' + r.id); location.hash = 'board'; }
   catch (err) { $('#fErr').textContent = err.message; } finally { loading(false); }
 }
 function editProj(id) {
-  const p = DB.projects.find(x => x.id === id);
-  closeM('mProj');
-  $('#formBox').innerHTML = `<h2>${esc(p.title)}</h2><p class="sub">이번 주에 한 일과 단계만 바꿔도 충분합니다. 저장하면 진행 기록에 한 줄 쌓입니다.</p>
+  const p = DB.projects.find(x => x.id === id); closeM('mProj');
+  $('#formBox').innerHTML = `<h2>${esc(p.title)}</h2><p class="sub">이번 주에 한 일과 단계만 바꿔도 충분합니다.</p>
     <form onsubmit="submitEdit(event,'${esc(id)}')"><div class="fg">
-    <div class="f full"><label>내 PIN 4자리 <em>*</em></label><input name="pin" inputmode="numeric" maxlength="6" required></div>
+    <div class="f full"><label>내 PIN <em>*</em></label><input name="pin" inputmode="numeric" maxlength="6" required></div>
     ${fields(p)}</div><div class="ferr" id="fErr"></div><div class="factions"><button type="button" class="btn btn-line" onclick="closeM('mForm')">닫기</button><button class="btn btn-gold">저장하기</button></div></form>`;
   openM('mForm');
 }
@@ -725,19 +1172,19 @@ async function submitEdit(e, id) {
   catch (err) { $('#fErr').textContent = err.message; } finally { loading(false); }
 }
 function cheer(pid, kind) {
-  const p = DB.projects.find(x => x.id === pid);
+  const p = DB.projects.find(x => x.id === pid) || DB.samples.find(x => x.id === pid);
   if (kind === '응원') { quickCheer(pid, kind); return; }
-  closeM('mProj');
-  const me = localStorage.getItem('exo_me') || '';
-  $('#cheerBox').innerHTML = `<h2>${kind === '같이해요' ? '같이해요' : '아이디어 남기기'}</h2><p class="sub">${esc(p.name)} · ${esc(p.title)}</p>
+  closeM('mProj'); closeM('mDetail');
+  const me = localStorage.getItem('exo_me') || JSON.parse(localStorage.getItem('exo_profile') || '{}').name || '';
+  $('#cheerBox').innerHTML = `<h2>${kind === '같이해요' ? '같이해요' : '질문·아이디어 남기기'}</h2><p class="sub">${esc(p.name)} · ${esc(p.title)}</p>
     <form onsubmit="submitCheer(event,'${esc(pid)}','${kind}')"><div class="fg">
     <div class="f full"><label>내 이름</label><input name="from" value="${esc(me)}"></div>
-    <div class="f full"><label>${kind === '같이해요' ? '어떻게 함께할 수 있나요?' : '아이디어나 알고 있는 방법'}</label><textarea name="text" required></textarea></div>
+    <div class="f full"><label>${kind === '같이해요' ? '어떻게 함께할 수 있나요?' : '궁금한 점, 아이디어, 알고 있는 방법'}</label><textarea name="text" required></textarea></div>
     </div><div class="ferr" id="cErr"></div><div class="factions"><button class="btn btn-gold">보내기</button></div></form>`;
   openM('mCheer');
 }
 async function quickCheer(pid, kind) {
-  const k = 'exo_ch_' + pid; if (localStorage.getItem(k)) { toast('이미 응원했어요. 아이디어로 한마디 남겨 보세요.'); return; }
+  const k = 'exo_ch_' + pid; if (localStorage.getItem(k)) { toast('이미 응원했어요. 질문이나 아이디어로 한마디 남겨 보세요.'); return; }
   try { await api('cheer', { pid, kind, from: localStorage.getItem('exo_me') || '익명', text: '' }); localStorage.setItem(k, 1); toast('응원을 보냈습니다.'); } catch (e) { toast(e.message); }
 }
 async function submitCheer(e, pid, kind) {
@@ -746,13 +1193,12 @@ async function submitCheer(e, pid, kind) {
   try { await api('cheer', { pid, kind, from: d.from || '익명', text: d.text }); closeM('mCheer'); toast('보냈습니다.'); }
   catch (err) { $('#cErr').textContent = err.message; } finally { loading(false); }
 }
-
-/* ---------- feed / help / timeline ---------- */
 function renderFeed() {
-  const pmap = Object.fromEntries(DB.projects.map(p => [p.id, p]));
+  const name = id => (DB.projects.find(p => p.id === id) || DB.samples.find(s => s.id === id) || {});
   const items = [
     ...DB.logs.map(l => ({ at: l.at, who: l.name, html: `<b>${esc(l.name)}</b> · ${esc(l.title)}<br>${esc(l.week || l.stage + ' 단계로 갱신')}`, pid: l.pid })),
-    ...DB.cheers.filter(c => c.text).map(c => ({ at: c.at, who: c.from, html: `<b>${esc(c.from)}</b> → ${esc(pmap[c.pid]?.name || '')} · ${esc(c.kind)}<br>${esc(c.text)}`, pid: c.pid }))
+    ...DB.cheers.filter(c => c.text).map(c => ({ at: c.at, who: c.from, html: `<b>${esc(c.from)}</b> → ${esc(name(c.pid).name || '')} · ${esc(c.kind)}<br>${esc(c.text)}`, pid: c.pid })),
+    ...DB.samples.filter(s => s.name !== '박대훈' || String(s.created) > '2026-11-10').map(s => ({ at: s.created, who: s.name, html: `<b>${esc(s.name)}</b>님이 샘플을 올렸습니다<br>${esc(s.title)}`, pid: s.id }))
   ].sort((a, b) => String(b.at).localeCompare(String(a.at))).slice(0, 40);
   $('#feedCount').textContent = items.length + '건';
   $('#feed').innerHTML = items.length ? items.map(i => `<div class="fi" style="cursor:pointer" onclick="openProj('${esc(i.pid)}')"><span class="av" style="background:${avColor(i.who)}">${esc(initial(i.who))}</span><div>${i.html}<br><small>${esc(i.at)}</small></div></div>`).join('') : '<p style="color:var(--muted);font-size:14px">아직 소식이 없습니다.</p>';
@@ -764,11 +1210,10 @@ function renderTimeline() {
   let nextFound = false;
   $('#tl').style.gridTemplateColumns = innerWidth > 1080 ? `repeat(${sc.length},1fr)` : '';
   $('#tl').innerHTML = sc.map((s, i) => { const d = ddays(s.date); let cls = d < 0 ? 'done' : ''; if (d >= 0 && !nextFound) { cls = 'next'; nextFound = true; }
-    const dt = new Date(s.date + 'T00:00:00'); const wd = '일월화수목금토'[dt.getDay()];
-    return `<div class="tli ${cls}"><div class="dot">${i + 1}</div><div class="d">${dt.getMonth() + 1}.${dt.getDate()} (${wd}) ${d > 0 ? '· D-' + d : d === 0 ? '· 오늘' : ''}</div><h4>${esc(s.title)}</h4><p>${esc(s.desc)}</p><div class="k"><span class="pill">${esc(s.kind)}</span></div></div>`; }).join('');
+    const dt = new Date(s.date + 'T00:00:00');
+    return `<div class="tli ${cls}"><div class="dot">${i + 1}</div><div class="d">${dt.getMonth() + 1}.${dt.getDate()} (${WD[dt.getDay()]}) ${d > 0 ? '· D-' + d : d === 0 ? '· 오늘' : ''}</div><h4>${esc(s.title)}</h4><p>${esc(s.desc)}</p></div>`; }).join('');
 }
 addEventListener('resize', () => DB && renderTimeline());
-
 if (KEY) { api('load').catch(() => {}); }
 </script>
 </body>
