@@ -459,7 +459,7 @@ footer b{color:#fff}
 
     <div id="gate" class="gate">
       <h3>광역본부 직원 전용</h3>
-      <p>단톡방에 공유된 비밀번호를 넣어 주세요. 한 번 넣으면 이 기기에서는 다시 묻지 않습니다.</p>
+      <p>단톡방에 공유된 비밀번호를 넣어 주세요. 한 번 넣으면 이 기기에서는 다시 묻지 않습니다.<span id="svHint"></span></p>
       <form onsubmit="login(event)">
         <input id="pw" type="password" placeholder="비밀번호" autocomplete="off">
         <button class="btn btn-gold" type="submit">들어가기</button>
@@ -785,6 +785,7 @@ function renderAll() {
   $('#libLink').href = c['자료실 링크'] || '#';
   renderHeroCta(); renderToday(); renderSurveyCard(); renderGallery(); renderBoard(); renderFeed(); renderTimeline();
   loadSheetImgs();
+  if (!window._dl && /[?&]survey/.test(location.search) && svOpen()) { window._dl = 1; setTimeout(openSurvey, 300); }
 }
 const svOpen = () => { const dl = (DB.conf || {})['설문 마감'] || '2026-11-15'; return ddays(dl) >= 0; };
 const svDone = () => !!localStorage.getItem('exo_sv_done');
@@ -1214,6 +1215,7 @@ function renderTimeline() {
     return `<div class="tli ${cls}"><div class="dot">${i + 1}</div><div class="d">${dt.getMonth() + 1}.${dt.getDate()} (${WD[dt.getDay()]}) ${d > 0 ? '· D-' + d : d === 0 ? '· 오늘' : ''}</div><h4>${esc(s.title)}</h4><p>${esc(s.desc)}</p></div>`; }).join('');
 }
 addEventListener('resize', () => DB && renderTimeline());
+if (/[?&]survey/.test(location.search)) { const h = document.getElementById('svHint'); if (h) h.textContent = ' 들어가면 워크숍 설문이 바로 열립니다.'; }
 if (KEY) { api('load').catch(() => {}); }
 </script>
 </body>
